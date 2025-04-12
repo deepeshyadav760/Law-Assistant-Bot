@@ -66,7 +66,7 @@ Start the Streamlit application:
 streamlit run app.py
 ```
 
-The application will be available at http://localhost:8501 in your web browser.
+The application will be available at https://ipclawassitant.streamlit.app/ in your web browser.
 
 ### Training the Model
 
