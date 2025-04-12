@@ -418,16 +418,9 @@
 import streamlit as st
 import pandas as pd
 import json
-# import torch
 import os
-import pickle
 import re
-import nltk
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
 import random
-from model import Encoder, Decoder, Seq2Seq
-from utils import preprocess_text, text_to_indices, generate_response
 
 # Set page configuration
 st.set_page_config(
