@@ -626,6 +626,9 @@ def main():
     # Create tabs
     tab1, tab2, tab3 = st.tabs(["Chat with Assistant", "Browse IPC Data", "Model Information"])
     
+    # Chat input - MUST BE OUTSIDE TABS
+    user_input = st.chat_input("Describe a crime scenario or ask about an IPC section...")
+    
     with tab1:
         st.header("Chat with IPC Law Assistant")
         
@@ -645,8 +648,8 @@ def main():
             with st.chat_message(message["role"]):
                 st.markdown(message["content"])
         
-        # Chat input
-        if user_input := st.chat_input("Describe a crime scenario or ask about an IPC section..."):
+        # Process user input
+        if user_input:
             # Add user message to chat history
             st.session_state.messages.append({"role": "user", "content": user_input})
             
